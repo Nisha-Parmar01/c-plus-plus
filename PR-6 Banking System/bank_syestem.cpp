@@ -1,3 +1,4 @@
+//bankig system
 #include <iostream>
 using namespace std;
 class bank{
@@ -36,15 +37,27 @@ class bank{
 	        }
 	 }
 };
+class SavingAccount : public bank {
+public:
+     virtual string getType(){
+        return "Saving";
+    }
+};
+class CurrentAccount : public bank {
+public:
+      virtual string getType(){
+        return "Current";
+    }
+};
 int	main(){
-		bank b[50];
+		bank* Account[50];
 		int cnt=0,choice,check = 0,accno,i,ac_no;
 	    double amuno;
 	    string name;
 		while(1){
 		cout<<"--------bank menu--------"<<endl;
 		cout<<"press 1 Create Account"<<endl;
-		cout<<"press 2  check Bank details"<<endl;
+		cout<<"press 2 show account details"<<endl;
 		cout<<"press 3 diposite Amount"<<endl;
 		cout<<"press 4 withdraw Amouunt"<<endl;
 		cout<<"press 5 Exit"<<endl;
@@ -56,13 +69,27 @@ int	main(){
 		}
 		switch(choice){
 			  case 1: {
+			  	int type;
+			  	 cout<< "Select Account Type:"<<endl;
+				cout<<"1. Savings \n2. Current"<<endl;
+				cout<<"Enter Choice: ";
+       			 cin >> type;
+					    if (type == 1) {
+                			Account[cnt] = new SavingAccount();
+            			} else if (type == 2) {
+                			Account[cnt] = new CurrentAccount();
+            			} else {
+                		cout << "Invalid account type!" << endl;
+                		continue;
+            }
 	            cout << "Enter the account number: ";
 	            cin >> accno;
 	            cout << "Enter the account holder name: ";
 	            cin >> name;
 	            cout << "Enter the amount: ";
 	            cin >> amuno;
-	            b[cnt++].setdetails(accno, name, amuno);
+	            Account[cnt]->setdetails(accno, name, amuno);
+	            cnt++;
 	            cout << "------ account created successfully -------" << endl;
 	            break;
 	        }
@@ -70,9 +97,9 @@ int	main(){
 			    cout << "Enter Account Number: ";
 			    cin >> ac_no;
 			    for(i = 0; i < cnt; i++) {
-			        if(b[i].Acno() == ac_no) {
+			        if(Account[i]->Acno() == ac_no) {
 			            check = 1;
-			            b[i].getdetails();
+			            Account[i]->getdetails();
 			            break;
 			        }
 				}   
@@ -86,11 +113,11 @@ int	main(){
 				 cout << "Enter Account Number: ";
 			    cin >> ac_no;
 			    for(i = 0; i < cnt; i++) {
-			        if(b[i].Acno() == ac_no) {
+			        if(Account[i]->Acno() == ac_no) {
 			            check = 1;
 				        cout << "Enter amount to deposit: ";
 				        cin >> depositAmt;
-				        b[i].deposite(depositAmt); 
+				       Account[i]->deposite(depositAmt); 
 			            break;
 			        }
 				}   
@@ -106,11 +133,11 @@ int	main(){
 				cout << "Enter Account Number: ";
 			    cin >> ac_no;
 			    for(i = 0; i < cnt; i++) {
-			        if(b[i].Acno() == ac_no) {
+			        if(Account[i]->Acno() == ac_no) {
 			            check = 1;
                         cout << "Enter amount to withdraw: ";
                         cin >> withdrawAmt;
-                        b[i].withdraw(withdrawAmt);
+                        Account[i]->withdraw(withdrawAmt);
 			            break;
 			        }
 				}   

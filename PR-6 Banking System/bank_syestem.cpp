@@ -100,13 +100,13 @@ int	main(){
 			        if(Account[i]->Acno() == ac_no) {
 			            check = 1;
 			            Account[i]->getdetails();
+			             cout << "----------account details--------------" << endl;
 			            break;
 			        }
 				}   
 			    if(check == 0) {
 			        cout << "Account not found" << endl;
 			    }
-			    cout << "----------account details--------------" << endl;
     		break;
 			case 3:
 				  double depositAmt;
@@ -118,6 +118,7 @@ int	main(){
 				        cout << "Enter amount to deposit: ";
 				        cin >> depositAmt;
 				       Account[i]->deposite(depositAmt); 
+				       	cout<<"---------deposited successfully!--------------"<<endl;
 			            break;
 			        }
 				}   
@@ -125,7 +126,6 @@ int	main(){
 			        cout << "Account not found" << endl;
 			        
 			    }
-						cout<<"---------deposited successfully!--------------"<<endl;
 				break;
 			
 			case 4:
@@ -138,6 +138,7 @@ int	main(){
                         cout << "Enter amount to withdraw: ";
                         cin >> withdrawAmt;
                         Account[i]->withdraw(withdrawAmt);
+                        cout<<"---------succsefully withdraw amouunt --------------"<<endl;
 			            break;
 			        }
 				}   
@@ -145,7 +146,6 @@ int	main(){
 			        cout << "Account not found" << endl;
 			        
 			    }
-						cout<<"---------succsefully withdraw amouunt --------------"<<endl;
 				break;
 			default:{
 				        cout << "Invalid Choice! Please try again." << endl;

@@ -100,7 +100,7 @@ int	main(){
 			        if(Account[i]->Acno() == ac_no) {
 			            check = 1;
 			            Account[i]->getdetails();
-			             cout << "----------account details--------------" << endl;
+			             cout << "---------Account details displayed successfully.------------" << endl;
 			            break;
 			        }
 				}   
@@ -118,7 +118,7 @@ int	main(){
 				        cout << "Enter amount to deposit: ";
 				        cin >> depositAmt;
 				       Account[i]->deposite(depositAmt); 
-				       	cout<<"---------deposited successfully!--------------"<<endl;
+				       	cout<<"---------Amount deposited successfully.--------------"<<endl;
 			            break;
 			        }
 				}   

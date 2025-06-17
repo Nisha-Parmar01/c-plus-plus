@@ -32,8 +32,8 @@ class bank{
 	            cout << "?Insufficient Balance!" << endl;
 	        } else {
 	            amuno -= amt;
-	            cout << "Rs. " << amt<< endl;
-	            cout << "Updated Balance: Rs. " << amuno << endl;
+	            cout<<"Amount Withdrawn: Rs. " << amt << endl;
+       			cout<<"Available Balance: Rs. " << amuno << endl;
 	        }
 	 }
 };
@@ -51,7 +51,7 @@ public:
 };
 int	main(){
 		bank* Account[50];
-		int cnt=0,choice,check = 0,accno,i,ac_no;
+		int cnt=0,choice,accno,i,ac_no;
 	    double amuno;
 	    string name;
 		while(1){
@@ -63,10 +63,11 @@ int	main(){
 		cout<<"press 5 Exit"<<endl;
 		cout<<"Enter the choice:";
 		cin>>choice;
-	    if(choice==5){
+	    if(choice==4){
 	    	cout<<"Thank you";
 	    	break;
 		}
+		int check = 0;
 		switch(choice){
 			  case 1: {
 			  	int type;
@@ -81,7 +82,7 @@ int	main(){
             			} else {
                 		cout << "Invalid account type!" << endl;
                 		continue;
-            }
+                		}
 	            cout << "Enter the account number: ";
 	            cin >> accno;
 	            cout << "Enter the account holder name: ";
@@ -94,6 +95,7 @@ int	main(){
 	            break;
 	        }
 	    case 2:
+	    	check = 0;
 			    cout << "Enter Account Number: ";
 			    cin >> ac_no;
 			    for(i = 0; i < cnt; i++) {
@@ -109,6 +111,7 @@ int	main(){
 			    }
     		break;
 			case 3:
+				check = 0;
 				  double depositAmt;
 				 cout << "Enter Account Number: ";
 			    cin >> ac_no;
@@ -129,6 +132,7 @@ int	main(){
 				break;
 			
 			case 4:
+				check = 0;
 				double withdrawAmt;	
 				cout << "Enter Account Number: ";
 			    cin >> ac_no;
@@ -149,7 +153,7 @@ int	main(){
 				break;
 			default:{
 				        cout << "Invalid Choice! Please try again." << endl;
-			}
+				}
 		  }
 	    }
 	    return 0;

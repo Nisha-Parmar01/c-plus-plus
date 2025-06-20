@@ -1,3 +1,4 @@
+//student Mangment system
 #include <iostream>
 #include <vector>
 using namespace std;

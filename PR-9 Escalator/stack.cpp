@@ -47,7 +47,7 @@ class Stack{
             cout << "Stack is empty" << endl;
         } else {
             cout << "Stack elements are: ";
-            for (int i = top; i >= 0; i--) {
+            for (int i =0; i >= top; i--) {
                 cout << arr[i] << " ";
             }
             cout << endl;

@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #cfd9df, #e2ebf0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  overflow-x: hidden; 
+}
+.container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap; 
+  justify-content: center;
+}
+
+.card {
+  background: linear-gradient(145deg, #ffffff, #f0f4f8);
+  padding: 25px 30px;
+  border-radius: 20px;
+  box-shadow: 0 15px 25px rgba(0,0,0,0.1);
+  width: 550px;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 30px rgba(0,0,0,0.15);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #333;
+}
+
+label {
+  font-weight: 600;
+  color: #555;
+}
+
+input, select {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0 18px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus, select:focus { 
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.2);
+  outline: none;
+}
+
+.marks div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.marks label {
+  flex: 1;
+}
+
+.marks input {
+  flex: 1;
+}
+
+button {
+  padding: 12px 20px;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+  align-self: center;
+  margin-top: 10px;
+  width: 50%;
+  color: #fff;
+  background: linear-gradient(90deg, #2196f3, #1e88e5); 
+  
+}
+
+button:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+.result-card {
+  display: none; 
+  text-align: center;
+  justify-content: center;
+}
+
+.result-card p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.grade {
+  margin-top: 15px;
+  padding: 10px 25px;
+  border-radius: 15px;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.grade.Aplus { background-color: #4caf50; }
+.grade.A { background-color: #2196f3; }
+.grade.B { background-color: #00bcd4; }
+.grade.C { background-color: #ff9800; }
+.grade.D { background-color: #ff5722; }
+.grade.Fail { background-color: #f44336; }
+
+
+@media (max-width: 1200px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    width: 90%;
+  }
+}

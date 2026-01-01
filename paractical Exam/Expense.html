@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Expense Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="balance-card">
+      <h2>✔ Balance: <span id="balance">0</span></h2>
+      <div class="totals">
+        <div>Total Income:<br><span id="income">0</span></div>
+        <div>Total Expenses:<br><span id="expenses">0</span></div>
+      </div>
+    </div>
+
+    <div class="main-section">
+      <table class="expense-table">
+        <thead>
+          <tr>
+            <th>S.no.</th>
+            <th>Name</th>
+            <th>Amount</th>
+            <th>Type</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody id="expenseList"></tbody>
+      </table>
+
+      <div class="add-expense">
+        <h3>Add New</h3>
+        <label>Entry type:</label>
+        <select id="type">
+          <option value="Income">Income</option>
+          <option value="Expense">Expense</option>
+        </select>
+
+        <label>Name:</label>
+        <input type="text" id="name" placeholder="Name">
+
+        <label>Amount:</label>
+        <input type="number" id="amount" placeholder="0">
+
+        <label>Date</label>
+        <input type="date" id="date">
+
+        <button onclick="addExpense()">Add Expense</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  width: 350px;
+  margin: 50px auto;
+  padding: 25px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 15px #ccc;
+  text-align: center;
+}
+
+.card h2 {
+  margin-bottom: 20px;
+}
+
+
+input, select, button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+
+#msg {
+  color: red;
+  margin-top: 5px;
+  font-size: 14px;
+  min-height: 18px; 
+}
+
+
+.container {
+  width: 900px;
+  margin: 30px auto;
+}
+
+
+.balance-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 0 10px #ccc;
+  margin-bottom: 20px;
+}
+
+.balance-card h2 {
+  margin: 0 0 10px 0;
+}
+
+.balance-card .totals {
+  display: flex;
+  justify-content: space-around;
+  font-size: 18px;
+}
+
+.balance-card .totals span {
+  font-weight: bold;
+}
+
+#income { color: green; }
+#expenses { color: red; }
+
+
+.main-section {
+  display: flex;
+  gap: 20px;
+}
+
+
+.expense-table {
+  border-collapse: collapse;
+  width: 60%;
+  background: white;
+  box-shadow: 0 0 10px #ccc;
+}
+
+.expense-table th, .expense-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+
+.expense-table th {
+  background: #a0f0a0;
+}
+
+.add-expense {
+  width: 35%;
+  background: white;
+  padding: 20px;
+  box-shadow: 0 0 10px #ccc;
+  border-radius: 8px;
+}
+
+.add-expense h3 {
+  margin-top: 0;
+}
+
+.add-expense input, .add-expense select, .add-expense button {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+}
+
+.add-expense button {
+  background: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.add-expense button:hover {
+  background: #0056b3;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Bank</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="bank-card">
+
+  <!-- Header -->
+  <div class="header">
+    <img src="https://cdn-icons-png.flaticon.com/512/2830/2830284.png">
+    <h2>Smart Bank</h2>
+  </div>
+
+  <!-- Account Preview -->
+  <div class="accounts">
+    <div class="acc-card">💰 Saving</div>
+    <div class="acc-card current">🏦 Current</div>
+  </div>
+
+  <!-- Account Type -->
+  <select id="choice" onchange="gettype()">
+    <option value="">Select Account Type</option>
+    <option value="1">Saving Account</option>
+    <option value="2">Current Account</option>
+  </select>
+
+  <div id="Ttype"></div>
+  <div id="result"></div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
